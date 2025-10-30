@@ -36,7 +36,7 @@ init:
 	test -d $(VENV) || python$(PYTHON_VERSION) -m venv $(VENV)
 	$(VENV)/bin/python -m pip install setuptools
 	$(VENV)/bin/python -m pip install --upgrade pip
-	$(VENV)/bin/python -m pip install poetry
+	$(VENV)/bin/python -m pip install "poetry==2.1.3"
 	$(VENV)/bin/poetry install
 
 precommit-install:
