@@ -24,7 +24,7 @@ COPY . /code/
 COPY poetry.lock pyproject.toml /code/
 
 RUN pip install --no-compile --upgrade pip \
- && pip install --no-compile poetry
+ && pip install --no-compile poetry==2.1.3
 RUN poetry config virtualenvs.create false \
  && poetry config cache-dir ${POETRYCACHEDIR} \
  && poetry install --no-interaction --no-ansi
